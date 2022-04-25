@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block title %}login{% endblock %}
+
+{% block content %}
+    <div class="mx-auto mt-3 mb-5 text-center">
+        <i class="fa-solid fa-book fa-5x"></i>
+    </div>
+    <div class="container" style="max-width: 50%;">
+        <form method="POST">
+            <label class="form-label">Username</label>
+            <input name="username" class="form-control mb-1" type="text" autofocus placeholder=" username">
+            <label class="form-label">Password</label>
+            <input name="password" class="form-control mb-1" type="password" placeholder=" password">
+            <input class="form-control mt-3 p-2 mx-auto" type="submit" style="max-width: 30%; align-self:center;" >
+        </form>
+    </div>  
+{% endblock %}

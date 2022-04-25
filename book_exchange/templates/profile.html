@@ -1,0 +1,59 @@
+{% extends "layout_user.html" %}
+{% block title %}result{% endblock %}
+
+{% block content %}
+
+<div class="mx-auto" style="z-index: -100; width: 60%; max-width:450px; margin-top: 120px;">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th><h2>My profile</h2></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <label for="fn">First name</label><br>
+                        {{info[0]}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="ln">Last name</label><br>
+                        {{info[1]}}
+                    </td>
+                </tr>
+                <tr>
+                    <td >
+                        <label for="bd">Birthday</label><br>
+                        {{info[2]}}
+                    </td>
+                </tr>
+                <tr>
+                    <td >
+                        <label for="city" >City</label><br>
+                        {{info[3]}}
+                    </td>
+                </tr>
+                <tr>
+                    <td >
+                        <label for="state" >State</label><br>
+                        {{info[4]}}
+                    </td>
+                </tr>
+                <tr>
+                    <td >
+                        <label for="country" >Country</label><br>
+                        {{info[5]}}
+                    </td>
+                </tr>
+                
+            </tbody>
+            <tfoot>
+                <td class="text-end" colspan="2"><a href="/create_profile"><button type="submit" class="btn btn-primary">Edit</button></a></td>
+            </tfoot>
+        </table>
+</div>
+
+
+{% endblock %}

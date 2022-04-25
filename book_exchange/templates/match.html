@@ -1,0 +1,34 @@
+{% extends "layout_user.html" %}
+{% block title %}result{% endblock %}
+
+{% block content %}
+
+<div class="mx-auto" style="z-index: -100; width: 60%; margin-top: 120px;">
+        <table class="table table-responsive">
+            <thead>
+                <tr>
+                    <th scope="col">USERNAME</th>
+                
+          
+                </tr>
+            </thead>
+            <tbody>
+                {% for items in username_list %}
+                <form method="post" action="/match_request">
+                    <tr>
+                        <input name="owner" type="hidden" value="{{items[0][0]}}">
+                        <input name="id_book" type="hidden" value="{{id_book}}">
+                        <td>{{items[1]}}</td>
+                        
+                        <td class="text-end"><button class="btn btn-primary" type="submit">SEND REQUEST</button></td>
+                    </tr>
+                </form>
+                {% endfor %}
+            </tbody>
+            <tfoot>
+                <td colspan="3" class="text-end"><a href="javascript:history.back()"><button type="submit" class="btn btn-primary ">Return</button></a></td>
+            </tfoot>
+        </table>
+</div>
+
+{% endblock %}

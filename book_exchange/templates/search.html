@@ -1,0 +1,20 @@
+{% extends "layout_user.html" %}
+{% block title %}Search{% endblock %}
+
+{% block content %}
+
+<div class="position-absolute top-50 start-50 translate-middle border border-dark rounded p-5">
+    <form method="post">
+        <div class="container">
+            <p>Database Query</p>
+            <label name="book_name">name</label>
+            <input type="text" class="form-control" name="book_name">
+            <label name="author">author</label>
+            <input type="text" class="form-control" name="author">
+            <button type="submit" class="btn btn-primary mt-3">search</button>
+        </div>
+
+    </form>
+</div>
+
+{% endblock %}

@@ -1,0 +1,147 @@
+{% extends "layout.html" %}
+{% block title %}Index{% endblock %}
+
+
+
+{% block head %}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+{% endblock %}
+
+
+
+
+{% block content %}
+    
+
+
+
+<!-- Page content -->
+<div class="container-fluid p-0" style="max-width:1600px; width:100%;">
+
+  <!-- Automatic Slideshow Images -->
+  <div class="container-fluid p-0" style="position: relative; z-index: -1;">
+    <img src="https://picsum.photos/1600/800" class="img-fluid" >
+    <h1 class="centered" style="color: white; font-size: 8vw;">WELCOME TO BOOK EXCHANGE</h1>
+    
+    
+  </div>
+
+  <!-- The Band Section -->
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+    <h2 class="w3-wide">BOOK EXCHANGE</h2>
+    <p class="w3-opacity"><i>We love learning</i></p>
+    <p class="w3-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vel lacus ligula. Donec molestie justo id augue consequat laoreet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec eget faucibus nibh. Pellentesque sit amet neque quis arcu blandit mattis. Fusce ac sem at mi pharetra placerat id sed turpis. Proin hendrerit ac nulla ac sodales. Integer imperdiet, massa eget pellentesque scelerisque, urna mi euismod nisl, et gravida justo lectus non dui.</p>
+    <div class="w3-row w3-padding-32">
+      <div class="w3-third">
+        <p>Lorem ipsum</p>
+        <img src="https://picsum.photos/1080?random=1" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
+      </div>
+      <div class="w3-third">
+        <p>Lorem ipsum</p>
+        <img src="https://picsum.photos/1080?random=2" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
+      </div>
+      <div class="w3-third">
+        <p>Lorem ipsum</p>
+        <img src="https://picsum.photos/1080?random=3" class="w3-round" alt="Random Name" style="width:60%">
+      </div>
+    </div>
+  </div>
+
+
+  <!-- The Tour Section -->
+  <div class="w3-black" id="tour">
+    <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+      <h2 class="w3-wide w3-center">Lorem ipsum</h2>
+      <p class="w3-opacity w3-center"><i>consectetur adipiscing elit.</i></p><br>
+
+      <ul class="w3-ul w3-border w3-white w3-text-grey">
+        <li class="w3-padding">September <span class="w3-tag w3-red w3-margin-left"></span></li>
+        <li class="w3-padding">October <span class="w3-tag w3-red w3-margin-left"></span></li>
+        <li class="w3-padding">November <span class="w3-badge w3-right w3-margin-right"></span></li>
+      </ul>
+
+      <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
+        <div class="w3-third w3-margin-bottom">
+          <img src="https://picsum.photos/1080?random=6" alt="New York" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>congue nulla</b></p>
+            <p class="w3-opacity">Fri 27 Nov 2016</p>
+            <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+            <button class="w3-button w3-black w3-margin-bottom">ENROLL</button>    
+        </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+          <img src="https://picsum.photos/1080?random=8" alt="Paris" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>posuere risus </b></p>
+            <p class="w3-opacity">Sat 28 Nov 2016</p>
+            <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+            <button class="w3-button w3-black w3-margin-bottom">ENROLL</button>
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+          <img src="https://picsum.photos/1080?random=10" alt="San Francisco" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>dapibus non</b></p>
+            <p class="w3-opacity">Sun 29 Nov 2016</p>
+            <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+            <button class="w3-button w3-black w3-margin-bottom">ENROLL</button>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- The Contact Section -->
+  <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
+    <h2 class="w3-wide w3-center">CONTACT</h2>
+    <p class="w3-opacity w3-center"><i>Drop a note!</i></p>
+    <div class="w3-row w3-padding-32">
+      <div class="w3-col m6 w3-large w3-margin-bottom">
+        <i class="fa fa-map-marker" style="width:30px"></i> Montreal, Ca<br>
+        <i class="fa fa-phone" style="width:30px"></i> Phone: +1 123-321-5896<br>
+        <i class="fa fa-envelope" style="width:30px"> </i> Email: support@bookexchange.com<br>
+      </div>
+      <div class="w3-col m6">
+        <form action="/action_page.php" target="_blank">
+          <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+            </div>
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+            </div>
+          </div>
+          <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+          <button class="w3-button w3-black w3-section w3-right" type="submit">SEND</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+<!-- End Page Content -->
+
+
+<!-- Image of location/map -->
+<div class="container-fluid text-center">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2795.7926785702057!2d-73.55935514866502!3d45.51425193802034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc91bad49c9990d%3A0x9b4582a5b330412d!2s555%20Bd%20Ren%C3%A9-L%C3%A9vesque%20E%2C%20Montr%C3%A9al%2C%20QC%20H2L%200C2!5e0!3m2!1sen!2sca!4v1648157620206!5m2!1sen!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+
+<!-- Footer -->
+<footer class="container text-center mt-3 mb-3">
+  <i class="fa fa-facebook-official fa-2x"></i>
+  <i class="fa fa-instagram fa-2x"></i>
+  <i class="fa fa-snapchat fa-2x"></i>
+  <i class="fa fa-pinterest-p fa-2x"></i>
+  <i class="fa fa-twitter fa-2x"></i>
+  <i class="fa fa-linkedin fa-2x"></i>
+  <p>HTML template</p>
+</footer>
+
+
+{% endblock %}

@@ -1,0 +1,50 @@
+{% extends "layout_user.html" %}
+{% block title %}login{% endblock %}
+
+{% block content %}
+    <div class="container mx-auto text-center" style="z-index: -100; margin-top: 120px;">
+        <i class="fa-solid fa-book fa-5x"></i>
+    </div>
+    <div class="container" style="max-width: 80%;">
+        <table class="table">
+            <thead>
+                <tr>
+                    <td>
+                        <h3>Message</h3>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                {% for items in list_return %}
+                    <form method="post">
+                        <input type="hidden" name="items" value="{{items}}">
+                        <tr>
+                            <td class="align-middle">
+                                <span style="color: blue;"><b>{{items[0]}}</b></span> wants to exchange your book: <span style="color: blue;"><b>{{items[1]}}</b></span>
+                            </td>
+                            <td>
+                                <input class="btn btn-secondary" type="submit" name="submit_button" value="Decline">
+                            </td>
+                            <td>
+                                <input class="btn btn-primary" type="submit" name="submit_button" value="Accept">
+                            </td>
+                        </tr>  
+                    </form> 
+                {% endfor %}
+
+
+                {% for items in list_return2 %}
+                    <form method="post">
+                        <tr>
+                            <td class="align-middle" colspan="3">
+                                your request to <span style="color: blue;"><b>{{items[0]}}</b></span> about book: <span style="color: blue;"><b>{{items[1]}}</b></span> have been sent
+                            </td>
+                            
+                        </tr>  
+                    </form>   
+                {% endfor %}
+                
+            </tbody>
+        </table>
+    </div>  
+{% endblock %}

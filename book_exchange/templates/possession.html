@@ -1,0 +1,42 @@
+{% extends "layout_user.html" %}
+{% block title %}login{% endblock %}
+
+{% block content %}
+    <div class="container mx-auto text-center" style="z-index: -100; margin-top: 120px;">
+        <i class="fa-solid fa-book fa-5x"></i>
+        <h1>My Possession</h1>
+    </div>
+    <div class="container" style="max-width: 50%;">
+        <table class="table">
+            <thead>
+                <tr>
+                    <td>book_name</td>
+                    <td>authors</td>
+                    <td>submit</td>
+                </tr>
+            </thead>
+            <tbody>
+                {% for items in possession_list %}
+                    <form  method="POST" action="/possession" >
+                        <tr>
+                            <input type="hidden" name="name" value="{{items[0][0]}}">
+                            <input type="hidden" name="authors" value="{{items[0][1]}}">
+                            <td>{{items[0][0]}}</td>
+                            {% if items[0][1] == "None"%}
+                                <td>none</td>
+                            {% else %}
+                                <td>{{items[0][1]}}</td>
+                            {% endif %}
+                            <td>
+                                <div>
+                                    <span><button class="btn btn-primary" type="submit">delete</button></span>
+                                </div> 
+                            </td>
+                        </tr>
+                    </form>    
+                {% endfor %}
+                
+            </tbody>
+        </table>
+    </div>  
+{% endblock %}

@@ -1,0 +1,23 @@
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+}
+
+.search-box {
+    border: 1px solid black ;
+    border-radius: 20;
+}
+
+.profile-border{
+    border-top: 0;
+    border-bottom: 1;
+    border-left: 0;
+    border-right: 0;
+}

@@ -1,0 +1,43 @@
+{% extends "layout_user.html" %}
+{% block title %}result{% endblock %}
+
+{% block content %}
+
+<div class="mx-auto" style="z-index: -100; width: 60%; margin-top: 120px;">
+        <table class="table table-responsive">
+            <thead>
+                <tr>
+                    <th scope="col">book_name</th>
+                    <th scope="col">authors</th>
+                    <th scope="col">select</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for items in book_list %}
+                    <form  method="POST" action="/result" >
+                        <tr>
+                            <input type="hidden" name="index" value="{{loop.index0}}">
+                            <td>{{items["name"]}}</td>
+                            {% if items["authors"][1] == NULL%}
+                                <td>{{items["authors"][0]}}</td>
+                            {% else %}
+                                <td>{{items["authors"][0]}} & {{items["authors"][1]}}</td>
+                            {% endif %}
+                            <td>
+                                <div>
+                                    <span><input class="btn btn-primary" type="submit" value="Submit"></span>
+                                </div> 
+                            </td>
+                        </tr>
+                    </form>    
+                {% endfor %}
+            </tbody>
+            <tfoot>
+                <td colspan="2" >Not In The List</td>
+                <td><a href="javascript:history.back()"><button type="submit" class="btn btn-primary">Return</button></a></td>
+            </tfoot>
+        </table>
+</div>
+
+
+{% endblock %}

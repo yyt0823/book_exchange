@@ -1,0 +1,60 @@
+{% extends "layout_user.html" %}
+{% block title %}result{% endblock %}
+
+{% block content %}
+
+<div class="mx-auto" style="z-index: -100; width: 60%; max-width:450px; margin-top: 120px;">
+    <form method="POST">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th><h2>My profile</h2></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <label for="fn">First name</label><br>
+                        <input type="text" name="fn" id="fn" class="profile-border">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="ln">Last name</label><br>
+                        <input type="text" name="ln" id="ln" class="profile-border">
+                    </td>
+                </tr>
+                <tr>
+                    <td >
+                        <label for="bd">Birthday</label><br>
+                        <input type="date" name="bd" id="bd" class="profile-border">
+                    </td>
+                </tr>
+                <tr>
+                    <td >
+                        <label for="city" >City</label><br>
+                        <input type="text" name="city" id="city" class="profile-border">
+                    </td>
+                </tr>
+                <tr>
+                    <td >
+                        <label for="state" >State</label><br>
+                        <input type="text" name="state" id="state" class="profile-border">
+                    </td>
+                </tr>
+                <tr>
+                    <td >
+                        <label for="country" >Country</label><br>
+                        <input type="text" name="country" id="country" class="profile-border">
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <td class="text-end" colspan="2"><button type="submit" class="btn btn-primary">Submit</button></td>
+            </tfoot>
+        </table>
+    </form>
+</div>
+
+
+{% endblock %}
